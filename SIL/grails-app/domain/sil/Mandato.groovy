@@ -9,6 +9,6 @@ class Mandato {
 	Usuario prefeito
 	
     static constraints = {
-		
+		dataEncerramento nullable:true
     }
 }

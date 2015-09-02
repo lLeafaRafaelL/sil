@@ -9,5 +9,8 @@ class Prefeitura {
 	String telefone
 
     static constraints = {
+		cidade unique:true
+		email email:true, nullable:true, blank:true
+		telefone blank:true, nullable: true
     }
 }

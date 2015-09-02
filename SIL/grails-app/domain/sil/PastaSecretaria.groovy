@@ -1,11 +1,13 @@
 package sil
 
 class PastaSecretaria {
-
+	Date dataInicio
+	Date dataFim
+	Date dataEncerramento
+	OrgaoPublico orgao
+	Usuario secretario
+	
     static constraints = {
-		Date dataInicio
-		Date dataFim
-		Date dataEncerramento
-		// OrgaoPublico orgao
+		dataEncerramento nullable:true
     }
 }

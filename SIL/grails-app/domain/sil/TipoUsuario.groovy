@@ -6,5 +6,6 @@ class TipoUsuario {
 
     static constraints = {
 		nivelAcesso size:0..5, blank: false
+		descricao blank:false, nullable : false, unique:true
     }
 }

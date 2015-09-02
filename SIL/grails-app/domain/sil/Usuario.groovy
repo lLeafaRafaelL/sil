@@ -20,5 +20,7 @@ class Usuario {
 		login unique: true, blank: false, nullable:false, validator: { val, obj -> val.size() >= 3 }
 		email email:true, blank: true, nullable:true
 		dataNascimento max: new Date()
+		tipoPessoa inList:['F', 'J']
+		outrasInformacoes blank:true, nullable:true
     }
 }

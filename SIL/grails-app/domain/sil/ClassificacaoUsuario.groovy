@@ -2,10 +2,11 @@ package sil
 
 class ClassificacaoUsuario {
 	String descricao
-	List<Usuario> usuarios
 	TipoUsuario tipoUsuario
-
+	
+	static hasMany =[usuarios: Usuario]
+	
     static constraints = {
-		decricao unique: true
+		descricao unique: true, validator: { val, obj -> val.size() >= 3 }
     }
 }
