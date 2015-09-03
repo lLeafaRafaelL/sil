@@ -5,6 +5,7 @@ class Estado {
 	String uf
 	
     static constraints = {
-		nome unique:true
+		nome unique:true, blank:false, nullable: false
+		uf blank: false, nullable: false
     }
 }

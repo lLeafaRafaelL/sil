@@ -5,6 +5,6 @@ class Cidade {
 	Estado estado
 	
     static constraints = {
-		nome unique: true, validator: { val, obj -> val.size() >= 2 }
+		nome unique: true, blank:false, nullable:false, validator: { val, obj -> val.size() >= 2 }
     }
 }

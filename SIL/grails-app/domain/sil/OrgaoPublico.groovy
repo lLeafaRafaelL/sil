@@ -16,7 +16,7 @@ class OrgaoPublico {
 		email email:true, blank:true, nullable:true
 		cidade nullable:false, blank: true
 		telefone blank:true, nullable: true
-		nome unique:true, validator: { val, obj -> val.size() >= 3 }
+		nome unique:true, blank:false, validator: { val, obj -> val.size() >= 3 }
 		sigla blank:true, nullable: true
     }
 }

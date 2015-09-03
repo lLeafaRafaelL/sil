@@ -7,6 +7,6 @@ class ClassificacaoUsuario {
 	static hasMany =[usuarios: Usuario]
 	
     static constraints = {
-		descricao unique: true, validator: { val, obj -> val.size() >= 3 }
+		descricao unique: true, blank:false, nullable:false, validator: { val, obj -> val.size() >= 3 }
     }
 }

@@ -10,5 +10,9 @@ class Mandato {
 	
     static constraints = {
 		dataEncerramento nullable:true
+		dataInicio nullable:false
+		dataFim nullable:false
+		cidade nullable:false
+		prefeito nullable:false
     }
 }
