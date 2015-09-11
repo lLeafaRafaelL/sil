@@ -9,5 +9,9 @@ class PastaSecretaria {
 	
     static constraints = {
 		dataEncerramento nullable:true
+		dataInicio nullable:false
+		dataFim nullable:false
+		orgao nullable:false
+		secretario nullable:false
     }
 }

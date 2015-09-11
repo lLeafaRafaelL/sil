@@ -9,7 +9,7 @@ class OrgaoPublico {
 	String email
 	Cidade cidade
 	
-	static hasMany =[dotacoes:Dotacao]
+	static hasMany =[dotacoes:Dotacao, pastas: PastaSecretaria]
 
     static constraints = {
 		cnpj unique:true
