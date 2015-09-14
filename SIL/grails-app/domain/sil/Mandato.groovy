@@ -1,5 +1,7 @@
 package sil
 
+import autenticacao.Usuario
+
 class Mandato {
 	
 	Date dataInicio

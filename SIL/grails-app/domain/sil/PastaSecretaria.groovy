@@ -1,4 +1,5 @@
 package sil
+import autenticacao.Usuario
 
 class PastaSecretaria {
 	Date dataInicio
