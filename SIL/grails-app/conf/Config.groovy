@@ -121,9 +121,9 @@ log4j.main = {
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'autenticacao.Usuario'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'autenticacao.UsuarioPermissao'
 grails.plugin.springsecurity.authority.className = 'autenticacao.Permissao'
-grails.plugin.springsecurity.auth.loginFormUrl = '/exemplo/login'
-grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/exemplo/index'
-grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/exemplo/login'
+grails.plugin.springsecurity.auth.loginFormUrl = '/inicio/login'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/inicio/index'
+grails.plugin.springsecurity.failureHandler.defaultFailureUrl = '/inicio/login'
 grails.plugin.springsecurity.adh.errorPage = '/j_spring_security_logout'
 grails.plugin.springsecurity.dao.hideUserNotFoundExceptions = false
 grails.plugin.springsecurity.successHandler.alwaysUseDefault = false
@@ -131,8 +131,8 @@ grails.plugin.springsecurity.successHandler.alwaysUseDefault = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                ['permitAll'],
 	'/index':           ['permitAll'],
-	'/exemplo/login': 	['permitAll'],
-	'/exemplo/erro': 	['permitAll'],
+	'/inicio/login': 	['permitAll'],
+	'/inicio/erro': 	['permitAll'],
 	'/**':				['ROLE_ADMIN'],
 	//'/**/index**':    	['permitAll'],
 	//'/index.gsp':     	['permitAll'],

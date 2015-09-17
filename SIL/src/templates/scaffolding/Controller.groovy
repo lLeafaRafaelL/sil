@@ -6,15 +6,21 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class ${className}Controller {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+		
+		if (params.nome){
+			flash.message = message(code:'default.created.message',args:['${className}',params.nome], default:'${className} criado')
+		}
+		
         respond ${className}.list(params), model:[${propertyName}Count: ${className}.count()]
     }
 
     def show(${className} ${propertyName}) {
-        respond ${propertyName}
+		redirect(action:'index', params:[nome:${propertyName}.id])
+        // respond ${propertyName}
     }
 
     def create() {
@@ -86,7 +92,7 @@ class ${className}Controller {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: '${className}.label', default: '${className}'), ${propertyName}.id])
                 redirect action:"index", method:"GET"
             }
-            '*'{ render status: NO_CONTENT }
+            // '*'{ render status: NO_CONTENT }
         }
     }
 

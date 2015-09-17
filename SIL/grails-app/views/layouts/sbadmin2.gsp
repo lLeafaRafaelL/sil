@@ -5,11 +5,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title><g:layoutTitle default="SIL - Sistema Integrado de Licitações"/></title>
+    <title>SIL - <g:layoutTitle default="Sistema Integrado de Licitações"/></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="${request.contextPath}/sbadmin2/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -132,40 +129,44 @@
             <div class="navbar-default sidebar" role="navigation" style="background-color: rgba(231,231,231,0.8);">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
+                    	<li>
+                        <!-- <li class="sidebar-search"> -->
+                            <!-- <div class="input-group custom-search-form"> -->
+                                <!-- <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-search"></i>
                                     </button>
-                                </span>
-                            </div>
-                            <!-- /input-group -->
+                                </span> -->
+                                <table width="100%"><tr><td align="center">
+	                                <a href="${request.contextPath}"><button style="color:black; font-size:96px;" class="glyphicon glyphicon-home btn btn-default"></button></a>
+	                                </td></tr>
+                                </table>
+                            <!-- </div> -->
                         </li>
                         <li>
-                            <a href="${request.contextPath}/sbadmin2/pages/index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="${request.contextPath}/inicio"><i class="glyphicon glyphicon-home"></i> Início</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <a href="#"><i class="glyphicon glyphicon-file"></i> Cadastros Básicos<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="${request.contextPath}/sbadmin2/pages/flot.html">Flot Charts</a>
+                                    <a href="${request.contextPath}/estado/">Estado</a>
                                 </li>
                                 <li>
-                                    <a href="${request.contextPath}/sbadmin2/pages/morris.html">Morris.js Charts</a>
+                                    <a href="${request.contextPath}/cidade">Cidade</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="${request.contextPath}/sbadmin2/pages/tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                            <a href="#"><i class="fa fa-gavel fa-fw"></i> Processos</a>
                         </li>
                         <li>
-                            <a href="${request.contextPath}/sbadmin2/pages/forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Parametrizações</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-file-text fa-fw"></i> Consultas e Relatórios<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="${request.contextPath}/sbadmin2/pages/panels-wells.html">Panels and Wells</a>
@@ -189,7 +190,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-building fa-fw"></i> Administração do Sistema<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="#">Second Level Item</a>
@@ -218,7 +219,25 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li class="active">
+                        <li>
+                            <a href="#"><i class="fa fa-life-bouy fa-fw"></i> Ajuda<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Perguntas Frequentes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Links Úteis</a>
+                                </li>
+                                <li>
+                                    <a href="#">Suporte</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sobre</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <!--<li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -228,8 +247,7 @@
                                     <a href="login">Login Page</a>
                                 </li>
                             </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
